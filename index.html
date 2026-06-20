@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeziApp Download</title>
+    <style>
+        /* Zurücksetzen von Standardabständen */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Verhindert unerwünschtes Scrollen */
+        }
+
+        body {
+            /* Hintergrundbild einrichten */
+            background-image: url('back.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            /* Flexbox zur perfekten horizontalen und vertikalen Zentrierung */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container für das Overlay-Bild */
+        .download-container {
+            width: 70%; /* Nimmt immer genau 70% der Bildschirmbreite ein */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Der Link/Button um das Bild herum */
+        .download-link {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            
+            /* Subtiler Hover-Effekt für bessere User Experience */
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        /* Das Overlay-Bild selbst */
+        .download-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        /* Interaktive Effekte beim Drüberfahren und Klicken */
+        .download-link:hover {
+            transform: scale(1.02); /* Leichtes Vergrößern beim Hovern */
+            filter: brightness(1.05);
+        }
+
+        .download-link:active {
+            transform: scale(0.98); /* Leichtes Eindrücken beim Klicken */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-container">
+        <!-- Verlinkung zur APK mit dem 'download'-Attribut -->
+        <a href="https://github.com/spezi-stack/speziapp/releases/download/v3.3/speziapp_v3.3final.apk" class="download-link" download="speziapp_v3.3final.apk">
+            <img src="down.png" alt="SpeziApp APK herunterladen">
+        </a>
+    </div>
+
+</body>
+</html>
