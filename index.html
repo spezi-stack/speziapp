@@ -1,84 +1,46 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpeziApp Download</title>
-    <style>
-        /* Zurücksetzen von Standardabständen */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Verhindert unerwünschtes Scrollen */
-        }
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
 
-        body {
-            /* Hintergrundbild einrichten */
-            background-image: url('back.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            
-            /* Flexbox zur perfekten horizontalen und vertikalen Zentrierung */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
 
-        /* Container für das Overlay-Bild */
-        .download-container {
-            width: 70%; /* Nimmt immer genau 70% der Bildschirmbreite ein */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
 
-        /* Der Link/Button um das Bild herum */
-        .download-link {
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            outline: none;
-            -webkit-tap-highlight-color: transparent;
-            
-            /* Subtiler Hover-Effekt für bessere User Experience */
-            transition: transform 0.2s ease, filter 0.2s ease;
-        }
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
 
-        /* Das Overlay-Bild selbst */
-        .download-link img {
-            width: 100%;
-            height: auto;
-            display: block;
-            cursor: pointer;
-        }
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
-        /* Interaktive Effekte beim Drüberfahren und Klicken */
-        .download-link:hover {
-            transform: scale(1.02); /* Leichtes Vergrößern beim Hovern */
-            filter: brightness(1.05);
-        }
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="spezi">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-        .download-link:active {
-            transform: scale(0.98); /* Leichtes Eindrücken beim Klicken */
-        }
-    </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>spezi</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
 
-    <div class="download-container">
-        <!-- Verlinkung zur APK mit dem 'download'-Attribut -->
-        <a href="https://github.com/spezi-stack/speziapp/releases/download/v3.3/speziapp_v3.3final.apk" class="download-link" download="speziapp_v3.3final.apk">
-            <img src="down.png" alt="SpeziApp APK herunterladen">
-        </a>
-    </div>
-
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
